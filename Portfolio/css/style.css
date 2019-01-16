@@ -1,0 +1,32 @@
+.bg-brown{
+	background-color: olive;
+}
+img{
+	width: 75%;
+	height: 75%;
+}
+.d-img{
+	width: 30%;
+	height: 30%;
+	padding-right: 6px;
+}
+.img-work{
+	width: 100%;
+	height:100%;
+}
+.main-img{
+	width: 100%;
+	height: 100%;
+}
+.font-div
+{
+	width: 30%;
+}
+
+@media only screen and (min-width: 1100px){
+
+	.font-div{
+		padding: 51.5px 0px!important;
+	}
+
+}
