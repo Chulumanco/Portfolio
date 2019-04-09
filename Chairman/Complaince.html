@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en">
+<!--<![endif]-->
+<head>
+	<meta charset="utf-8" />
+	<title>Scans</title>
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+	<meta content="" name="description" />
+	<meta content="" name="author" />
+	
+	<!-- ================== BEGIN BASE CSS STYLE ================== -->
+	<link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
+	<link href="../assets/plugins/jquery-ui/jquery-ui.min.css" rel="stylesheet" />
+	<link href="../assets/plugins/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" />
+	<link href="../assets/plugins/font-awesome/5.3/css/all.min.css" rel="stylesheet" />
+	<link href="../assets/plugins/ionicons/css/ionicons.min.css" rel="stylesheet" />
+	<link href="../assets/plugins/animate/animate.min.css" rel="stylesheet" />
+	<link href="../assets/css/apple/style.min.css" rel="stylesheet" />
+	<link href="../assets/css/apple/style-responsive.min.css" rel="stylesheet" />
+	<link href="../assets/css/apple/theme/default.css" rel="stylesheet" id="theme" />
+	<!-- ================== END BASE CSS STYLE ================== -->
+	
+	<!-- ================== BEGIN PAGE LEVEL CSS STYLE ================== -->
+	<link href="../assets/plugins/jquery-jvectormap/jquery-jvectormap.css" rel="stylesheet" />
+	<link href="../assets/plugins/bootstrap-calendar/css/bootstrap_calendar.css" rel="stylesheet" />
+	<link href="../assets/plugins/gritter/css/jquery.gritter.css" rel="stylesheet" />
+	<link href="../assets/plugins/nvd3/build/nv.d3.css" rel="stylesheet" />
+	<!-- ================== END PAGE LEVEL CSS STYLE ================== -->
+	
+	<!-- ================== BEGIN BASE JS ================== -->
+	<script src="../assets/plugins/pace/pace.min.js"></script>
+	<!-- ================== END BASE JS ================== -->
+</head>
+<body>
+	<!-- begin #page-loader -->
+	<div id="page-loader" class="fade show"><span class="spinner"></span></div>
+	<!-- end #page-loader -->
+	
+	<!-- begin #page-container -->
+	<div id="page-container" class="fade page-sidebar-fixed page-header-fixed">
+		<!-- begin #header -->
+		<div id="header" class="header navbar-default">
+			<!-- begin navbar-header -->
+			<div class="navbar-header">
+				<a href="index.html" class="navbar-brand"><span class="navbar-logo"><i class="ion-ios-cloud"></i></span> <b>Color</b> Admin</a>
+				<button type="button" class="navbar-toggle" data-click="sidebar-toggled">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+			</div>
+			<!-- end navbar-header -->
+			
+			<!-- begin header-nav -->
+			<ul class="navbar-nav navbar-right">
+				<li>
+					<form class="navbar-form">
+						<div class="form-group">
+							<input type="text" class="form-control" placeholder="Enter keyword" />
+							<button type="submit" class="btn btn-search"><i class="ion-ios-search"></i></button>
+						</div>
+					</form>
+				</li>
+		
+			</ul>
+			<!-- end header navigation right -->
+		</div>
+		<!-- end #header -->
+		
+		<!-- begin #sidebar -->
+		<div id="sidebar" class="sidebar">
+				<!-- begin sidebar scrollbar -->
+				<div data-scrollbar="true" data-height="100%">
+					<!-- begin sidebar user -->
+					<ul class="nav">
+						<li class="nav-profile">
+							<a href="javascript:;" data-toggle="nav-profile">
+								<div class="cover with-shadow"></div>
+								<div class="image">
+									<img src="../assets/img/user/user-13.jpg" alt="" />
+								</div>
+								<div class="info">
+									<b class="caret"></b>
+									Sean Ngu
+									<small>Front end developer</small>
+								</div>
+							</a>
+						</li>
+						<li>
+							<ul class="nav nav-profile">
+								<li><a href="javascript:;"><i class="ion-ios-cog"></i> Settings</a></li>
+								<li><a href="javascript:;"><i class="ion-ios-share-alt"></i> Send Feedback</a></li>
+								<li><a href="javascript:;"><i class="ion-ios-help"></i> Helps</a></li>
+							</ul>
+						</li>
+					</ul>
+					<!-- end sidebar user -->
+					<!-- begin sidebar nav -->
+					<ul class="nav">
+						<li class="nav-header">Navigation</li>
+						<li class="has-sub active">
+							<a href="javascript:;">
+								<b class="caret"></b>
+								<i class="fas fa-tachometer-alt"></i>
+								<span>Dashboard</span>
+							</a>
+							<ul class="sub-menu">
+								<li><a href="Chairman_Dashboard.html">Summary</a></li>
+								<li class="active"><a href="Financial _Dashboard.html">Finance</a></li>
+								<li class="active"><a href="Operational_Dashboard.html">Operational</a></li>
+							</ul>
+						</li>
+						<li class="has-sub">
+							<a href="javascript:;">
+								<b class="caret"></b>
+								<i class="ion-ios-people bg-red"></i>
+								<span>Approvals </span> 
+							</a>
+							<ul class="sub-menu">
+								<li><a href="Disputes.html">Disputes</a></li>
+								<li><a href="Approvals.html">Approvals</a></li>
+								
+							</ul>
+						</li>
+						<li class="has-sub">
+							<a href="javascript:;">
+								<b class="caret"></b>
+								<i class="ion-ios-warning bg-orange"></i>
+								<span>Operational</span>
+							</a>
+							<ul class="sub-menu">
+								<li><a href="Exclusion.html">Exclusions</a></li>
+								<li><a href="Complaince.html">Complaince</a></li>
+								
+							</ul>
+						</li>
+			
+						<li class="has-sub">
+							<a href="javascript:;">
+								<b class="caret"></b>
+								<i class="fas fa-dollar-sign bg-purple"></i>
+								<span>Finance</span>
+							</a>
+							<ul class="sub-menu">
+								<li><a href="Income.html">Paid Invoices</a></li>
+								<li><a href="Expenses.html">Unpaid Invoices</a></li>
+						
+								
+	
+							</ul>
+					
+					
+						<!-- begin sidebar minify button -->
+						<li><a href="javascript:;" class="sidebar-minify-btn" data-click="sidebar-minify"><i class="ion-ios-arrow-back"></i> <span>Collapse</span></a></li>
+						<!-- end sidebar minify button -->
+					</ul>
+					<!-- end sidebar nav -->
+				</div>
+				<!-- end sidebar scrollbar -->
+			</div>
+			<div class="sidebar-bg"></div>
+			<!-- end #sidebar -->
+		
+		<!-- begin #content -->
+		<div id="content" class="content">
+			<!-- begin breadcrumb -->
+			<ol class="breadcrumb pull-right">
+				<li class="breadcrumb-item"><a href="javascript:;">Home</a></li>
+				<li class="breadcrumb-item"><a href="javascript:;">Dashboard</a></li>
+				<li class="breadcrumb-item active">Operational</li>
+			</ol>
+			<!-- end breadcrumb -->
+			<!-- begin page-header -->
+			<h1 class="page-header">Chairman Dashboard </h1>
+			<!-- end page-header -->
+			
+			<!-- begin row -->
+			<div class="row">
+				<!-- begin col-3 -->
+				<div class="col-lg-4 col-md-6">
+					<div class="widget widget-stats bg-white text-inverse">
+						<div class="stats-icon stats-icon-square bg-gradient-yellow"><i class="ion-ios-people"></i></div>
+						<div class="stats-content">
+							<div class="stats-title">Total Breathilizer Tests</div>
+							<div class="stats-number">700</div>
+							
+							<div class="stats-desc">Scans That Have been perfomed</div>
+						</div>
+					</div>
+				</div>
+				<!-- end col-3 -->
+				<!-- begin col-3 -->
+				<div class="col-lg-4 col-md-6">
+					<div class="widget widget-stats bg-white text-inverse">
+						<div class="stats-icon stats-icon-square bg-gradient-green"><i class="ion-ios-checkmark-circle"></i></div>
+						<div class="stats-content">
+							<div class="stats-title">Passed Breathilizer Tests</div>
+							<div class="stats-number">400</div>
+							
+							<div class="stats-desc">Failed Scans</div>
+						</div>
+					</div>
+				</div>
+				<!-- end col-3 -->
+				<!-- begin col-3 -->
+				<div class="col-lg-4 col-md-6">
+					<div class="widget widget-stats bg-white text-inverse">
+						<div class="stats-icon stats-icon-square bg-gradient-red"><i class="ion-ios-alert"></i></div>
+						<div class="stats-content">
+							<div class="stats-title">Failed Breathilizer Tests
+							</div>
+							<div class="stats-number">300 </div>
+						
+							<div class="stats-desc">Passed Scans </div>
+						</div>
+					</div>
+				</div>
+				<!-- end col-3 -->
+				<!-- begin col-3 -->
+				
+			<!-- end row -->
+
+				<!-- begin row -->
+				
+				<div class=" col-md-12 col-lg-12">
+						<!-- begin panel -->
+						<div class="panel panel-inverse">
+							<div class="panel-heading">
+								<div class="panel-heading-btn">
+									<a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-default" data-click="panel-expand"><i class="fa fa-expand"></i></a>
+									<a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-success" data-click="panel-reload"><i class="fa fa-redo"></i></a>
+									<a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-warning" data-click="panel-collapse"><i class="fa fa-minus"></i></a>
+									<a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-danger" data-click="panel-remove"><i class="fa fa-times"></i></a>
+								</div>
+								<h4 class="panel-title">Breathilizer Tests</h4>
+							</div>
+							<div class="panel-body">
+						<canvas id="breathChart" class="height-sm"></canvas></div>
+							</div>
+						</div>
+						<!-- end panel -->
+					</div>
+					<!-- end col-6 -->
+				</div>
+				<!-- end row -->
+				<!-- begin row -->
+				
+						<!-- begin col-12 -->
+						
+		<!-- end #content -->
+		
+		<!-- begin theme-panel -->
+		<div class="theme-panel theme-panel-lg">
+			<a href="javascript:;" data-click="theme-panel-expand" class="theme-collapse-btn"><i class="ion-ios-cog"></i></a>
+			<div class="theme-panel-content">
+				<h5 class="m-t-0">Color Theme</h5>
+				<ul class="theme-list clearfix">
+					<li><a href="javascript:;" class="bg-red" data-theme="red" data-theme-file="../assets/css/apple/theme/red.css" data-click="theme-selector" data-toggle="tooltip" data-trigger="hover" data-container="body" data-title="Red">&nbsp;</a></li>
+					<li><a href="javascript:;" class="bg-pink" data-theme="pink" data-theme-file="../assets/css/apple/theme/pink.css" data-click="theme-selector" data-toggle="tooltip" data-trigger="hover" data-container="body" data-title="Pink">&nbsp;</a></li>
+					<li><a href="javascript:;" class="bg-orange" data-theme="orange" data-theme-file="../assets/css/apple/theme/orange.css" data-click="theme-selector" data-toggle="tooltip" data-trigger="hover" data-container="body" data-title="Orange">&nbsp;</a></li>
+					<li><a href="javascript:;" class="bg-yellow" data-theme="yellow" data-theme-file="../assets/css/apple/theme/yellow.css" data-click="theme-selector" data-toggle="tooltip" data-trigger="hover" data-container="body" data-title="Yellow">&nbsp;</a></li>
+					<li><a href="javascript:;" class="bg-lime" data-theme="lime" data-theme-file="../assets/css/apple/theme/lime.css" data-click="theme-selector" data-toggle="tooltip" data-trigger="hover" data-container="body" data-title="Lime">&nbsp;</a></li>
+					<li><a href="javascript:;" class="bg-green" data-theme="green" data-theme-file="../assets/css/apple/theme/green.css" data-click="theme-selector" data-toggle="tooltip" data-trigger="hover" data-container="body" data-title="Green">&nbsp;</a></li>
+					<li><a href="javascript:;" class="bg-teal" data-theme="teal" data-theme-file="../assets/css/apple/theme/teal.css" data-click="theme-selector" data-toggle="tooltip" data-trigger="hover" data-container="body" data-title="Teal">&nbsp;</a></li>
+					<li><a href="javascript:;" class="bg-aqua" data-theme="aqua" data-theme-file="../assets/css/apple/theme/aqua.css" data-click="theme-selector" data-toggle="tooltip" data-trigger="hover" data-container="body" data-title="Aqua">&nbsp;</a></li>
+					<li class="active"><a href="javascript:;" class="bg-blue" data-theme="default" data-theme-file="../assets/css/apple/theme/default.css" data-click="theme-selector" data-toggle="tooltip" data-trigger="hover" data-container="body" data-title="Default">&nbsp;</a></li>
+					<li><a href="javascript:;" class="bg-purple" data-theme="purple" data-theme-file="../assets/css/apple/theme/purple.css" data-click="theme-selector" data-toggle="tooltip" data-trigger="hover" data-container="body" data-title="Purple">&nbsp;</a></li>
+					<li><a href="javascript:;" class="bg-indigo" data-theme="indigo" data-theme-file="../assets/css/apple/theme/indigo.css" data-click="theme-selector" data-toggle="tooltip" data-trigger="hover" data-container="body" data-title="Indigo">&nbsp;</a></li>
+					<li><a href="javascript:;" class="bg-black" data-theme="black" data-theme-file="../assets/css/apple/theme/black.css" data-click="theme-selector" data-toggle="tooltip" data-trigger="hover" data-container="body" data-title="Black">&nbsp;</a></li>
+				</ul>
+				<div class="divider"></div>
+				<div class="row m-t-10">
+					<div class="col-md-6 control-label text-inverse f-w-600">Header Styling</div>
+					<div class="col-md-6">
+						<select name="header-styling" class="form-control form-control-sm">
+							<option value="1">default</option>
+							<option value="2">inverse</option>
+						</select>
+					</div>
+				</div>
+				<div class="row m-t-10">
+					<div class="col-md-6 control-label text-inverse f-w-600">Header</div>
+					<div class="col-md-6">
+						<select name="header-fixed" class="form-control form-control-sm">
+							<option value="1">fixed</option>
+							<option value="2">default</option>
+						</select>
+					</div>
+				</div>
+				<div class="row m-t-10">
+					<div class="col-md-6 control-label text-inverse f-w-600">Sidebar Styling</div>
+					<div class="col-md-6">
+						<select name="sidebar-styling" class="form-control form-control-sm">
+							<option value="1">default</option>
+							<option value="2">grid</option>
+						</select>
+					</div>
+				</div>
+				<div class="row m-t-10">
+					<div class="col-md-6 control-label text-inverse f-w-600">Sidebar</div>
+					<div class="col-md-6">
+						<select name="sidebar-fixed" class="form-control form-control-sm">
+							<option value="1">fixed</option>
+							<option value="2">default</option>
+						</select>
+					</div>
+				</div>
+				<div class="row m-t-10">
+					<div class="col-md-6 control-label text-inverse f-w-600">Sidebar Gradient</div>
+					<div class="col-md-6">
+						<select name="content-gradient" class="form-control form-control-sm">
+							<option value="1">disabled</option>
+							<option value="2">enabled</option>
+						</select>
+					</div>
+				</div>
+				<div class="row m-t-10">
+					<div class="col-md-6 control-label text-inverse f-w-600">Direction</div>
+					<div class="col-md-6">
+						<select name="direction" class="form-control form-control-sm">
+							<option value="1">LTR</option>
+							<option value="2">RTL</option>
+						</select>
+					</div>
+				</div>
+				<div class="divider"></div>
+				<h5>THEME VERSION</h5>
+				<div class="theme-version">
+					<a href="../template_html/index_v2.html">
+						<span style="background-image: url(../assets/img/theme/default.jpg);"></span>
+					</a>
+					<a href="../template_transparent/index_v2.html">
+						<span style="background-image: url(../assets/img/theme/transparent.jpg);"></span>
+					</a>
+				</div>
+				<div class="theme-version">
+					<a href="../template_apple/index_v2.html" class="active">
+						<span style="background-image: url(../assets/img/theme/apple.jpg);"></span>
+					</a>
+					<a href="../template_material/index_v2.html">
+						<span style="background-image: url(../assets/img/theme/material.jpg);"></span>
+					</a>
+				</div>
+				<div class="divider"></div>
+				<div class="row m-t-10">
+					<div class="col-md-12">
+						<a href="javascript:;" class="btn btn-inverse btn-block btn-rounded" data-click="reset-local-storage"><b>Reset Local Storage</b></a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- end theme-panel -->
+		
+		<!-- begin scroll to top btn -->
+		<a href="javascript:;" class="btn btn-icon btn-circle btn-success btn-scroll-to-top fade" data-click="scroll-top"><i class="fa fa-angle-up"></i></a>
+		<!-- end scroll to top btn -->
+	</div>
+	<!-- end page container -->
+	
+	<!-- ================== BEGIN BASE JS ================== -->
+	<script src="../assets/plugins/jquery/jquery-3.3.1.min.js"></script>
+	<script src="../assets/plugins/jquery-ui/jquery-ui.min.js"></script>
+	<script src="../assets/plugins/bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+	<!--[if lt IE 9]>
+		<script src="../assets/crossbrowserjs/html5shiv.js"></script>
+		<script src="../assets/crossbrowserjs/respond.min.js"></script>
+		<script src="../assets/crossbrowserjs/excanvas.min.js"></script>
+	<![endif]-->
+	<script src="../assets/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+	<script src="../assets/plugins/js-cookie/js.cookie.js"></script>
+	<script src="../assets/js/theme/apple.min.js"></script>
+	<script src="../assets/js/apps.min.js"></script>
+	<!-- ================== END BASE JS ================== -->
+	
+	<!-- ================== BEGIN PAGE LEVEL JS ================== -->
+	<script src="../assets/plugins/d3/d3.min.js"></script>
+	<script src="../assets/plugins/nvd3/build/nv.d3.js"></script>
+	<script src="../assets/plugins/morris/raphael.min.js"></script>
+    <script src="../assets/plugins/morris/morris.js"></script>
+	<script src="../assets/js/demo/chart-morris.demo.min.js"></script>
+	<script src="../assets/js/demo/chart-flot.demo.min.js"></script>
+	<script src="../assets/plugins/chart-js/Chart.min.js"></script>
+	<script src="../assets/js/demo/chart-js.demo.min.js"></script>
+	<script src="../assets/plugins/jquery-jvectormap/jquery-jvectormap.min.js"></script>
+	<script src="../assets/plugins/jquery-jvectormap/jquery-jvectormap-world-merc-en.js"></script>
+	<script src="../assets/plugins/bootstrap-calendar/js/bootstrap_calendar.min.js"></script>
+	<script src="../assets/plugins/gritter/js/jquery.gritter.js"></script>
+	<script src="../assets/js/demo/dashboard-v2.min.js"></script>
+	<!-- ================== END PAGE LEVEL JS ================== -->
+	
+<!-- ================== BEGIN PAGE LEVEL JS ================== -->
+<script src="../assets/plugins/gritter/js/jquery.gritter.js"></script>
+<script src="../assets/plugins/flot/jquery.flot.min.js"></script>
+<script src="../assets/plugins/flot/jquery.flot.time.min.js"></script>
+<script src="../assets/plugins/flot/jquery.flot.resize.min.js"></script>
+<script src="../assets/plugins/flot/jquery.flot.pie.min.js"></script>
+<script src="../assets/plugins/sparkline/jquery.sparkline.js"></script>
+<script src="../assets/plugins/jquery-jvectormap/jquery-jvectormap.min.js"></script>
+<script src="../assets/plugins/jquery-jvectormap/jquery-jvectormap-world-mill-en.js"></script>
+<script src="../assets/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
+<!-- ================== END PAGE LEVEL JS ================== -->
+
+
+	<script>	
+	/*@@@@@@@@@@@@@@@@@@@@@@@@@@ PIE CHART START @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@**/
+
+        var ctx = document.getElementById("breathChart");
+      
+        var data = {
+            labels: [
+                "Passed",
+                "Failed",
+               
+            ],
+            datasets: [
+                {
+                    data: [40, 60],
+                    backgroundColor: [
+                        "#C8103B",
+                        "#35E61A"
+                       
+                    ],
+                    hoverBackgroundColor: [
+                        "#C8103B",
+                        "#2AAF16"
+                       
+                    ]
+                                
+                                
+                }]
+        };
+        
+        var options = { 
+            cutoutPercentage:40,
+        };
+        
+        
+        var myDoughnutChart = new Chart(ctx, {
+            type: 'doughnut',
+            data: data,
+            options: options
+        });
+	
+	
+//PIE CHART 2 spot check by Tax Association
+
+var handlePieAndDonutChart = function() {
+	"use strict";
+	var donutChartData = [
+		{ 'label': 'Failded', 'value' : 300, 'color': COLOR_RED },  
+		{ 'label': 'Passed', 'value' : 400, 'color': COLOR_AQUA }
+	];
+	var pieChartData = [
+		{ 'label': 'Failed', 'value' : 300, 'color': COLOR_ORANGE },  
+		{ 'label': 'Passed', 'value' : 258, 'color': COLOR_GREY }
+	];
+	/*nv.addGraph(function() {
+		var pieChart = nv.models.pieChart()
+		  .x(function(d) { return d.label })
+		  .y(function(d) { return d.value })
+		  .showLabels(true)
+		  .labelType("percent")
+		  .labelThreshold(.05);
+
+		d3.select('#nv-pie-chart').append('svg')
+		  .datum(pieChartData)
+		  .transition().duration(350)
+		  .call(pieChart);
+
+		return pieChart;
+	});*/
+	nv.addGraph(function() {
+		var chart = nv.models.pieChart()
+		  .x(function(d) { return d.label })
+		  .y(function(d) { return d.value })
+		  .showLabels(true)
+		  .labelThreshold(.05)
+		  .labelType("percent")
+		  .donut(true) 
+		  .donutRatio(0.35);
+
+		d3.select('#nv-donut-chart').append('svg')
+		  .datum(donutChartData)
+		  .transition().duration(350)
+		  .call(chart);
+
+		return chart;
+	});
+};
+/*@@@@@@@@@@@@@@@@@@@@@@@@@@ PIE CHART END @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@**/
+
+/*@@@@@@@@@@@@@@@@@@@@@@@@@@ BAR CHART START @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@**/
+
+/*==================Bar graph 1 Sport check by Tax Association ==========*/
+
+/*==================Bar graph 2 Breathilizer test by Tax Association ==========*/
+
+//
+var handleChartJs = function() {
+	/*==================For Bar graph 1 Breathilizer test by Tax Association==========*/
+	var ctx = document.getElementById('bar-chart').getContext('2d');
+	var barChart = new Chart(ctx, {
+		type: 'bar',
+		data: barChartData
+	});
+
+	/*==================For Bar graph 1 Breathilizer test by Tax Association==========*/
+	var ctx2 = document.getElementById('bar-chart2').getContext('2d');
+	var barChart2 = new Chart(ctx2, {
+		type: 'bar',
+		data: barChartData2
+	});
+};
+
+/*@@@@@@@@@@@@@@@@@@@@@@@@@@ BAR CHART END @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@**/
+		$(document).ready(function() {
+			COLOR_GREEN = '#5AC8FA';
+			App.init();
+			DashboardV2.init();
+			
+			handleDonutChart();
+			handleChartJs();
+			//handleMorrisBarChart();
+			//handleMorrisDonusChart();
+			handlePieAndDonutChart();
+			
+		});
+	</script>
+</body>
+</html>

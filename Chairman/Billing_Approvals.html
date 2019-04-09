@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en">
+<!--<![endif]-->
+<head>
+	<meta charset="utf-8" />
+	<title>Billing Exemptions</title>
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+	<meta content="" name="description" />
+	<meta content="" name="author" />
+	
+	<!-- ================== BEGIN BASE CSS STYLE ================== -->
+	<link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
+	<link href="../assets/plugins/jquery-ui/jquery-ui.min.css" rel="stylesheet" />
+	<link href="../assets/plugins/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" />
+	<link href="../assets/plugins/font-awesome/5.3/css/all.min.css" rel="stylesheet" />
+	<link href="../assets/plugins/ionicons/css/ionicons.min.css" rel="stylesheet" />
+	<link href="../assets/plugins/animate/animate.min.css" rel="stylesheet" />
+	<link href="../assets/css/apple/style.min.css" rel="stylesheet" />
+	<link href="../assets/css/apple/style-responsive.min.css" rel="stylesheet" />
+	<link href="../assets/css/apple/theme/default.css" rel="stylesheet" id="theme" />
+	<!-- ================== END BASE CSS STYLE ================== -->
+	
+	<!-- ================== BEGIN PAGE LEVEL CSS STYLE ================== -->
+	<link href="../assets/plugins/jquery-jvectormap/jquery-jvectormap.css" rel="stylesheet" />
+	<link href="../assets/plugins/bootstrap-calendar/css/bootstrap_calendar.css" rel="stylesheet" />
+	<link href="../assets/plugins/gritter/css/jquery.gritter.css" rel="stylesheet" />
+    <link href="../assets/plugins/nvd3/build/nv.d3.css" rel="stylesheet" />
+	<link href="../assets/plugins/nvd3/build/chart.css" rel="stylesheet" />
+	<link href="../assets/plugins/nvd3/build/taxi.css" rel="stylesheet" />
+	<!-- ================== END PAGE LEVEL CSS STYLE ================== -->
+	
+	<!-- ================== BEGIN BASE JS ================== -->
+	<script src="../assets/plugins/pace/pace.min.js"></script>
+	<!-- ================== END BASE JS ================== -->
+</head>
+<body>
+	<!-- begin #page-loader -->
+	<div id="page-loader" class="fade show"><span class="spinner"></span></div>
+	<!-- end #page-loader -->
+	
+	<!-- begin #page-container -->
+	<div id="page-container" class="fade page-sidebar-fixed page-header-fixed">
+		<!-- begin #header -->
+		<div id="header" class="header navbar-default">
+			<!-- begin navbar-header -->
+			<div class="navbar-header">
+				<a href="index.html" class="navbar-brand"><span class="navbar-logo"><i class="ion-ios-cloud"></i></span> <b>Color</b> Admin</a>
+				<button type="button" class="navbar-toggle" data-click="sidebar-toggled">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+			</div>
+			<!-- end navbar-header -->
+			
+			<!-- begin header-nav -->
+			<ul class="navbar-nav navbar-right">
+				<li>
+					<form class="navbar-form">
+						<div class="form-group">
+							<input type="text" class="form-control" placeholder="Enter keyword" />
+							<button type="submit" class="btn btn-search"><i class="ion-ios-search"></i></button>
+						</div>
+					</form>
+				</li>
+		
+			</ul>
+			<!-- end header navigation right -->
+		</div>
+		<!-- end #header -->
+		
+		<!-- begin #sidebar -->
+		<div id="sidebar" class="sidebar">
+				<!-- begin sidebar scrollbar -->
+				<div data-scrollbar="true" data-height="100%">
+					<!-- begin sidebar user -->
+					<ul class="nav">
+						<li class="nav-profile">
+							<a href="javascript:;" data-toggle="nav-profile">
+								<div class="cover with-shadow"></div>
+								<div class="image">
+									<img src="../assets/img/user/user-13.jpg" alt="" />
+								</div>
+								<div class="info">
+									<b class="caret"></b>
+									Sean Ngu
+									<small>Front end developer</small>
+								</div>
+							</a>
+						</li>
+						<li>
+							<ul class="nav nav-profile">
+								<li><a href="javascript:;"><i class="ion-ios-cog"></i> Settings</a></li>
+								<li><a href="javascript:;"><i class="ion-ios-share-alt"></i> Send Feedback</a></li>
+								<li><a href="javascript:;"><i class="ion-ios-help"></i> Helps</a></li>
+							</ul>
+						</li>
+					</ul>
+					<!-- end sidebar user -->
+					<!-- begin sidebar nav -->
+					<ul class="nav">
+						<li class="nav-header">Navigation</li>
+						<li class="has-sub active">
+							<a href="javascript:;">
+								<b class="caret"></b>
+								<i class="fas fa-tachometer-alt"></i>
+								<span>Dashboard</span>
+							</a>
+							<ul class="sub-menu">
+								<li><a href="Chairman_Dashboard.html">Summary</a></li>
+								<li class="active"><a href="Financial_Dashboard.html">Finance</a></li>
+								<li class="active"><a href="Operational_Dashboard.html">Operational</a></li>
+							</ul>
+						</li>
+						<li class="has-sub">
+							<a href="javascript:;">
+								<b class="caret"></b>
+								<i class="ion-ios-people bg-red"></i>
+								<span>Approvals </span> 
+							</a>
+							<ul class="sub-menu">
+								<li><a href="Disputes.html">Disputes</a></li>
+								<li><a href="Approvals.html">Approvals</a></li>
+								
+							</ul>
+						</li>
+						<li class="has-sub">
+							<a href="javascript:;">
+								<b class="caret"></b>
+								<i class="ion-ios-warning bg-orange"></i>
+								<span>Operational</span>
+							</a>
+							<ul class="sub-menu">
+								<li><a href="Breatherlizer">Oparators</a></li>
+								
+							</ul>
+						</li>
+			
+						<li class="has-sub">
+							<a href="javascript:;">
+								<b class="caret"></b>
+								<i class="fas fa-dollar-sign bg-purple"></i>
+								<span>Finance</span>
+							</a>
+							<ul class="sub-menu">
+								<li><a href="Income.html">Paid Invoices</a></li>
+								<li><a href="Expenses.html">Unpaid Invoices</a></li>
+						
+								
+	
+							</ul>
+					
+					
+						<!-- begin sidebar minify button -->
+						<li><a href="javascript:;" class="sidebar-minify-btn" data-click="sidebar-minify"><i class="ion-ios-arrow-back"></i> <span>Collapse</span></a></li>
+						<!-- end sidebar minify button -->
+					</ul>
+					<!-- end sidebar nav -->
+				</div>
+				<!-- end sidebar scrollbar -->
+			</div>
+			<div class="sidebar-bg"></div>
+			<!-- end #sidebar -->
+		
+	
+
+		
+		<!-- end #sidebar -->
+		
+		<!-- begin #content -->
+		<div id="content" class="content">
+			<!-- begin breadcrumb -->
+			<ol class="breadcrumb pull-right">
+				<li class="breadcrumb-item"><a href="javascript:;">Home</a></li>
+				<li class="breadcrumb-item"><a href="javascript:;">Manage Geographic</a></li>
+				<li class="breadcrumb-item active">District</li>
+			</ol>
+			<!-- end breadcrumb -->
+			<!-- begin page-header -->
+			<h1 class="page-header">Billing Exemptions</h1>
+			<!-- end page-header -->
+
+
+
+				<!-- begin row -->
+				<div class="row">
+					<!-- begin col-12 -->
+					<div class="col-lg-12">
+					<!-- begin panel -->
+					<div class="panel panel-inverse">
+                            <!-- begin panel-heading -->
+                            <div class="panel-heading">
+                                <div class="panel-heading-btn">
+                                    <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-default" data-click="panel-expand"><i class="fa fa-expand"></i></a>
+                                    <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-success" data-click="panel-reload"><i class="fa fa-redo"></i></a>
+                                    <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-warning" data-click="panel-collapse"><i class="fa fa-minus"></i></a>
+                                    <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-danger" data-click="panel-remove"><i class="fa fa-times"></i></a>
+                                </div>
+                                <h4 class="panel-title">District</h4>
+                            </div>
+                            <!-- end panel-heading -->
+                            <!-- begin panel-body -->
+                            <div class="panel-body">
+                                <table id="data-table-combine" class="table table-striped table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th width="1%"></th>
+                                            <th class="text-nowrap">Name Surname</th>
+                                            <th class="text-nowrap">Billing Type</th>
+											<th class="text-nowrap">Comment</th>
+											<th class="text-nowrap">Approved By</th>
+											<th class="text-nowrap">Approved Date</th>
+                                            <th class="text-nowrap">Billing Exclusion Expiry Dated</th>
+											<th class="text-nowrap">Added By</th>
+                                            <th class="text-nowrap">Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="odd gradeX">
+											<td width="1%" class="f-s-600 text-inverse">1</td>
+											<td>Samson Ndlovu</td>
+                                            <td>Pensioner Bill</td>
+											<td>Samson is over 80 and therefore qualifies to be exampt from paying this bill</td>
+											<td>John Black</td>
+											<td>10/10/2019</td>
+											<td>NA</td>
+											<td>Dintle Moroka</td>
+                                            <td class="with-btn" nowrap="">
+                                                    <button type="button" class="btn btn-sm btn-success  width-80 m-r-2" data-toggle="modal" data-target="#approveModa" >Approve  </button>
+                                                    <button type="button" class="btn btn-sm btn-danger  width-80" data-toggle="modal" data-target="#declineModal">Delete </i></button>
+                                            </td>
+
+                                        </tr>
+                                        <tr class="even gradeC">
+											<td width="1%" class="f-s-600 text-inverse">2</td>
+											<td>Gauteng </td>
+                                            <td>NTA</td>
+                                            <td>Ekurhuleni Region</td>
+											<td>EKW</td>
+											<td>Ekurhuleni Region</td>
+											<td>Active</td>
+											<td>Charles</td>
+                                            <td class="with-btn" nowrap="">
+                                                    <button type="button" class="btn btn-sm btn-primary  width-60 m-r-2"  data-toggle="modal" data-target="#editDeviceModal">Edit  </button>
+                                                    <button type="button" class="btn btn-sm btn-white width-60" data-toggle="modal" data-target="#deletedDeviceModal">Delete </button>
+                                            </td>
+                                        </tr>
+                                        
+                                    </tbody>
+                                </table>
+                                	<!-- Add  Modal HTML START -->
+                                <div id="addDeviceModal" class="modal fade">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <form>
+                                                    <div class="modal-header ">						
+                                                        <h4 class="modal-title ">Add District</h4>
+                                                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                                    </div>
+                                                    <div class="modal-body">					
+                                                            <div class="col-md-12 ">
+																<!-- begin form-group row -->
+																<div class="form-group row m-b-10">
+																		<label class="col-md-3 text-md-right col-form-label">Province</label>
+																		<div class="col-md-9">
+																				<select class="form-control m-b-10">
+																					<option value="default">Select Province</option>
+																					<option value="Pretoria West">Gauteng</option>
+																					<option value="Hartbeespoort">Limpopo</option>
+																					<option value="Pretoria West">North West</option>
+																					<option value="Hartbeespoort">Free State</option>
+																					<option value="Pretoria West">Mpumalanga</option>
+																					<option value="Hartbeespoort">Kwazulu Natal</option>
+																					<option value="Pretoria West">Eastern Cape</option>
+																					<option value="Hartbeespoort">Western Cape</option>		
+																					<option value="Hartbeespoort">Northen Cape</option>																																																																																			
+																				</select>
+																		</div>
+																	</div>
+																	<!-- end form-group row -->	
+																<!-- begin form-group row -->
+																<div class="form-group row m-b-10">
+																		<label class="col-md-3 text-md-right col-form-label">Taxi Affiliation</label>
+																		<div class="col-md-9">
+																				<select class="form-control m-b-10" name="taxiaffiliation" id="taxiaffiliation">
+																					<option value="default">Select Taxi Affiliation</option>
+																					<option value="SANTACO">SANTACO</option>
+																					<option value="NTA">NTA</option>																																																																																		
+																				</select>
+																		</div>
+																	</div>
+																	<!-- end form-group row -->																																	
+                                                                <!-- begin form-group row -->
+                                                                    <div class="form-group row m-b-10">
+                                                                        <label class="col-md-3 text-md-right col-form-label">Name</label>
+                                                                        <div class="col-md-9">
+                                                                            <input type="text" name="name" id="name" placeholder="District name" class="form-control">
+                                                                        </div>
+                                                                    </div>
+																	<!-- end form-group row -->
+                                                                <!-- begin form-group row -->
+																<div class="form-group row m-b-10">
+                                                                        <label class="col-md-3 text-md-right col-form-label">Abbreviation Name</label>
+                                                                        <div class="col-md-9">
+                                                                            <input type="text" name="abbreviationname" id="abbreviationname" placeholder="Abbreviation name" class="form-control">
+                                                                        </div>
+                                                                    </div>
+                                                                    <!-- end form-group row -->																	
+
+                                                                    <!-- begin form-group row -->
+                                                                    <div class="form-group row m-b-10">
+                                                                        <label class="col-md-3 text-md-right col-form-label">Description</label>
+                                                                        <div class="col-md-9">
+                                                                            <input type="text" name="description"id="description" placeholder="District Description" class="form-control m-b-10">
+                                                                        </div>
+                                                                    </div>
+																	<!-- end form-group row -->																																		
+																	<!-- begin form-group row -->
+																	<div class="form-group row m-b-10">
+																		<label class="col-md-3 text-md-right col-form-label">Is Active</label>
+																		<div class="col-md-9 ">
+																			<input type="checkbox" class="m-10 m-l-0 p-10">
+																		</div>
+																	</div>
+																	<!-- end form-group row -->
+                                                                </div>				
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
+                                                        <input type="submit" class="btn btn-success" value="Add">
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                    <!-- Edit Modal HTML START-->
+                                    <div id="declineModal" class="modal fade">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <form>
+                                                    <div class="modal-header">						
+                                                        <h4 class="modal-title">Decline Examption</h4>
+                                                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                                   
+                                                                    <div class="form-group row m-b-10">
+                                                                        <label class="col-md-3 text-md-right col-form-label">Examption Type</label>
+                                                                        <div class="col-md-9">
+                                                                            <input type="text" name="name" id="name" placeholder="Pensioner Bill" class="form-control"disabled>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+																	<!-- end form-group row -->
+                                                                <!-- begin form-group row -->
+									
+                                                                    <!-- end form-group row -->																	
+
+                                                                    <!-- begin form-group row -->
+                                                                    <div class="form-group row m-b-10">
+                                                                        <label class="col-md-3 text-md-right col-form-label">Comment</label>
+                                                                        <div class="col-md-9">
+                                                                            <input type="text" name="description"id="description" placeholder="Reason for declining" class="form-control m-b-10">
+                                                                        </div>
+                                                                    </div>
+																	<!-- end form-group row -->																																		
+																	<!-- begin form-group row -->
+																					
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
+                                                        <input type="submit" class="btn btn-info" value="Save">
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                	<!-- Delete Modal HTML START-->
+                                
+                                    <!-- Delete Modal HTML END -->
+                            </div>
+                            <!-- end panel-body -->
+                        </div>
+					<!-- end panel -->
+	
+					</div>
+					<!-- end col-12 -->
+
+				</div>
+                <!-- end row -->	
+		
+
+		</div>
+		<!-- end #content -->
+		
+		<!-- begin theme-panel -->
+		<div class="theme-panel theme-panel-lg">
+			<a href="javascript:;" data-click="theme-panel-expand" class="theme-collapse-btn"><i class="ion-ios-cog"></i></a>
+			<div class="theme-panel-content">
+				<h5 class="m-t-0">Color Theme</h5>
+				<ul class="theme-list clearfix">
+					<li><a href="javascript:;" class="bg-red" data-theme="red" data-theme-file="../assets/css/apple/theme/red.css" data-click="theme-selector" data-toggle="tooltip" data-trigger="hover" data-container="body" data-title="Red">&nbsp;</a></li>
+					<li><a href="javascript:;" class="bg-pink" data-theme="pink" data-theme-file="../assets/css/apple/theme/pink.css" data-click="theme-selector" data-toggle="tooltip" data-trigger="hover" data-container="body" data-title="Pink">&nbsp;</a></li>
+					<li><a href="javascript:;" class="bg-orange" data-theme="orange" data-theme-file="../assets/css/apple/theme/orange.css" data-click="theme-selector" data-toggle="tooltip" data-trigger="hover" data-container="body" data-title="Orange">&nbsp;</a></li>
+					<li><a href="javascript:;" class="bg-yellow" data-theme="yellow" data-theme-file="../assets/css/apple/theme/yellow.css" data-click="theme-selector" data-toggle="tooltip" data-trigger="hover" data-container="body" data-title="Yellow">&nbsp;</a></li>
+					<li><a href="javascript:;" class="bg-lime" data-theme="lime" data-theme-file="../assets/css/apple/theme/lime.css" data-click="theme-selector" data-toggle="tooltip" data-trigger="hover" data-container="body" data-title="Lime">&nbsp;</a></li>
+					<li><a href="javascript:;" class="bg-green" data-theme="green" data-theme-file="../assets/css/apple/theme/green.css" data-click="theme-selector" data-toggle="tooltip" data-trigger="hover" data-container="body" data-title="Green">&nbsp;</a></li>
+					<li><a href="javascript:;" class="bg-teal" data-theme="teal" data-theme-file="../assets/css/apple/theme/teal.css" data-click="theme-selector" data-toggle="tooltip" data-trigger="hover" data-container="body" data-title="Teal">&nbsp;</a></li>
+					<li><a href="javascript:;" class="bg-aqua" data-theme="aqua" data-theme-file="../assets/css/apple/theme/aqua.css" data-click="theme-selector" data-toggle="tooltip" data-trigger="hover" data-container="body" data-title="Aqua">&nbsp;</a></li>
+					<li class="active"><a href="javascript:;" class="bg-blue" data-theme="default" data-theme-file="../assets/css/apple/theme/default.css" data-click="theme-selector" data-toggle="tooltip" data-trigger="hover" data-container="body" data-title="Default">&nbsp;</a></li>
+					<li><a href="javascript:;" class="bg-purple" data-theme="purple" data-theme-file="../assets/css/apple/theme/purple.css" data-click="theme-selector" data-toggle="tooltip" data-trigger="hover" data-container="body" data-title="Purple">&nbsp;</a></li>
+					<li><a href="javascript:;" class="bg-indigo" data-theme="indigo" data-theme-file="../assets/css/apple/theme/indigo.css" data-click="theme-selector" data-toggle="tooltip" data-trigger="hover" data-container="body" data-title="Indigo">&nbsp;</a></li>
+					<li><a href="javascript:;" class="bg-black" data-theme="black" data-theme-file="../assets/css/apple/theme/black.css" data-click="theme-selector" data-toggle="tooltip" data-trigger="hover" data-container="body" data-title="Black">&nbsp;</a></li>
+				</ul>
+				<div class="divider"></div>
+				<div class="row m-t-10">
+					<div class="col-md-6 control-label text-inverse f-w-600">Header Styling</div>
+					<div class="col-md-6">
+						<select name="header-styling" class="form-control form-control-sm">
+							<option value="1">default</option>
+							<option value="2">inverse</option>
+						</select>
+					</div>
+				</div>
+				<div class="row m-t-10">
+					<div class="col-md-6 control-label text-inverse f-w-600">Header</div>
+					<div class="col-md-6">
+						<select name="header-fixed" class="form-control form-control-sm">
+							<option value="1">fixed</option>
+							<option value="2">default</option>
+						</select>
+					</div>
+				</div>
+				<div class="row m-t-10">
+					<div class="col-md-6 control-label text-inverse f-w-600">Sidebar Styling</div>
+					<div class="col-md-6">
+						<select name="sidebar-styling" class="form-control form-control-sm">
+							<option value="1">default</option>
+							<option value="2">grid</option>
+						</select>
+					</div>
+				</div>
+				<div class="row m-t-10">
+					<div class="col-md-6 control-label text-inverse f-w-600">Sidebar</div>
+					<div class="col-md-6">
+						<select name="sidebar-fixed" class="form-control form-control-sm">
+							<option value="1">fixed</option>
+							<option value="2">default</option>
+						</select>
+					</div>
+				</div>
+				<div class="row m-t-10">
+					<div class="col-md-6 control-label text-inverse f-w-600">Sidebar Gradient</div>
+					<div class="col-md-6">
+						<select name="content-gradient" class="form-control form-control-sm">
+							<option value="1">disabled</option>
+							<option value="2">enabled</option>
+						</select>
+					</div>
+				</div>
+				<div class="row m-t-10">
+					<div class="col-md-6 control-label text-inverse f-w-600">Direction</div>
+					<div class="col-md-6">
+						<select name="direction" class="form-control form-control-sm">
+							<option value="1">LTR</option>
+							<option value="2">RTL</option>
+						</select>
+					</div>
+				</div>
+				<div class="divider"></div>
+				<h5>THEME VERSION</h5>
+				<div class="theme-version">
+					<a href="../template_html/index_v2.html">
+						<span style="background-image: url(../assets/img/theme/default.jpg);"></span>
+					</a>
+					<a href="../template_transparent/index_v2.html">
+						<span style="background-image: url(../assets/img/theme/transparent.jpg);"></span>
+					</a>
+				</div>
+				<div class="theme-version">
+					<a href="../template_apple/index_v2.html" class="active">
+						<span style="background-image: url(../assets/img/theme/apple.jpg);"></span>
+					</a>
+					<a href="../template_material/index_v2.html">
+						<span style="background-image: url(../assets/img/theme/material.jpg);"></span>
+					</a>
+				</div>
+				<div class="divider"></div>
+				<div class="row m-t-10">
+					<div class="col-md-12">
+						<a href="javascript:;" class="btn btn-inverse btn-block btn-rounded" data-click="reset-local-storage"><b>Reset Local Storage</b></a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- end theme-panel -->
+		
+		<!-- begin scroll to top btn -->
+		<a href="javascript:;" class="btn btn-icon btn-circle btn-success btn-scroll-to-top fade" data-click="scroll-top"><i class="fa fa-angle-up"></i></a>
+		<!-- end scroll to top btn -->
+	</div>
+	<!-- end page container -->
+	
+	<!-- ================== BEGIN BASE JS ================== -->
+	<script src="../assets/plugins/jquery/jquery-3.3.1.min.js"></script>
+	<script src="../assets/plugins/jquery-ui/jquery-ui.min.js"></script>
+	<script src="../assets/plugins/bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+	<!--[if lt IE 9]>
+		<script src="../assets/crossbrowserjs/html5shiv.js"></script>
+		<script src="../assets/crossbrowserjs/respond.min.js"></script>
+		<script src="../assets/crossbrowserjs/excanvas.min.js"></script>
+	<![endif]-->
+	<script src="../assets/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+	<script src="../assets/plugins/js-cookie/js.cookie.js"></script>
+	<script src="../assets/js/theme/apple.min.js"></script>
+	<script src="../assets/js/apps.min.js"></script>
+	<!-- ================== END BASE JS ================== -->
+	
+	<!-- ================== BEGIN PAGE LEVEL JS ================== -->
+	<script src="../assets/plugins/DataTables/media/js/jquery.dataTables.js"></script>
+	<script src="../assets/plugins/DataTables/media/js/dataTables.bootstrap.min.js"></script>
+	<script src="../assets/plugins/DataTables/extensions/Buttons/js/dataTables.buttons.min.js"></script>
+	<script src="../assets/plugins/DataTables/extensions/Buttons/js/buttons.bootstrap.min.js"></script>
+	<script src="../assets/plugins/DataTables/extensions/Buttons/js/buttons.flash.min.js"></script>
+	<script src="../assets/plugins/DataTables/extensions/Buttons/js/jszip.min.js"></script>
+	<script src="../assets/plugins/DataTables/extensions/Buttons/js/pdfmake.min.js"></script>
+	<script src="../assets/plugins/DataTables/extensions/Buttons/js/vfs_fonts.min.js"></script>
+	<script src="../assets/plugins/DataTables/extensions/Buttons/js/buttons.html5.min.js"></script>
+	<script src="../assets/plugins/DataTables/extensions/Buttons/js/buttons.print.min.js"></script>
+	<script src="../assets/plugins/DataTables/extensions/Responsive/js/dataTables.responsive.min.js"></script>
+	<script src="../assets/plugins/DataTables/extensions/AutoFill/js/dataTables.autoFill.min.js"></script>
+	<script src="../assets/plugins/DataTables/extensions/ColReorder/js/dataTables.colReorder.min.js"></script>
+	<script src="../assets/plugins/DataTables/extensions/KeyTable/js/dataTables.keyTable.min.js"></script>
+	<script src="../assets/plugins/DataTables/extensions/RowReorder/js/dataTables.rowReorder.min.js"></script>
+	<script src="../assets/plugins/DataTables/extensions/Select/js/dataTables.select.min.js"></script>
+	<script src="../assets/js/demo/table-manage-combine.demo.js"></script>
+    <!-- ================== END PAGE LEVEL JS ================== -->
+    
+<script>
+     /* $(document).ready(function() {
+            $('#data-table-scroller').DataTable( {
+                dom: 'Bfrtip',
+                buttons: [
+                    { extend:'copy', attr: { id: 'allan' } }, 'csv', 'excel', 'pdf', 'print'
+                ]
+            } );
+        } );*/</script>
+
+
+	<script>	
+
+		$(document).ready(function() {
+			COLOR_GREEN = '#5AC8FA';
+			App.init();
+			
+            TableManageCombine.init();
+			
+		});
+	</script>
+</body>
+</html>
